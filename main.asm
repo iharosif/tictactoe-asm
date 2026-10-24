@@ -130,7 +130,7 @@ _checkOffsetEquality:
   imul rcx, 3
   
   cmp rcx, rbx
-  jmp _offsetEquExit
+  je _offsetEquExit
   mov rax, 0
   
   _offsetEquExit:
