@@ -137,3 +137,31 @@ _checkOffsetEquality:
     mov rsp, rbp
     pop rbp
     ret
+
+; rax - visszateresi ertek
+; ha gyoztes - szimbolum ascii szama, ha nincs 0
+_checkCrossWin:
+  push rbp
+  mov rbp, rsp
+
+  mov rdi, 0
+  mov rsi, 5
+  mov rdx, 10
+  call _checkOffsetEquality
+
+  cmp rax, 0
+  je _crossWinExit
+  
+  mov rdi, 2
+  mov rsi, 5
+  mov rdx, 8
+  call _checkOffsetEquality
+
+
+  _crossWinExit:
+    mov rsp, rbp
+    pop rbp
+    ret
+
+_checkHorizontalWin:
+_checkVerticalWin:
