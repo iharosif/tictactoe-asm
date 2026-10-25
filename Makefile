@@ -1,10 +1,10 @@
 run:
-	./build/program
+	./build/prog
 
-build: assemble linkgcc
+build: assemble link
 
 assemble:
 	nasm -o ./build/main.out -f elf64 main.asm
 
-linkgcc:
-	gcc -nostartfiles -no-pie ./build/main.out -o ./build/program
+link:
+	ld -o ./build/prog ./build/main.out
