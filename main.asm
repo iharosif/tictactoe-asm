@@ -127,9 +127,9 @@ _start:
   pop rbp
   call _exit
 _exit:
-  mov rax, 60       ; exit(
-  mov rdi, 0        ;   EXIT_SUCCESS
-  syscall           ; );
+  mov rax, 60
+  mov rdi, 0
+  syscall
 
 ; rsi - const char* message
 ; rdx - msglen
