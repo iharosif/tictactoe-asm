@@ -1,5 +1,4 @@
 global _start
-global _main
 
 section .data
   board: times 3 db '---', 10
@@ -14,8 +13,6 @@ section .data
   drawPrompt: db 'Dontetlen', 10
   drawPromptLen: equ $-drawPrompt
 section .text
-_main:
-  jmp _start
 _start:
   push rbp
   mov rbp, rsp
